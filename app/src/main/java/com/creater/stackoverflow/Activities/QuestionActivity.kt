@@ -1,4 +1,4 @@
-package com.creater.stackoverflow.activity
+package com.creater.stackoverflow.Activities
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
