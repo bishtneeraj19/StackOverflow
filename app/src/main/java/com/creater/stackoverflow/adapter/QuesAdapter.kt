@@ -7,11 +7,12 @@ import android.view.ViewGroup
 import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.RecyclerView
 import com.creater.stackoverflow.R
-import com.creater.stackoverflow.Activities.AnswerActivity
+import com.creater.stackoverflow.activity.AnswerActivity
+import com.creater.stackoverflow.activity.QuestionActivity
 import com.creater.stackoverflow.model.QuestionItems
 import kotlinx.android.synthetic.main.question.view.*
 
-class QuesAdapter(val quesId:ArrayList<Int>, val items:List<QuestionItems>?, val activity:com.creater.stackoverflow.Activities.QuestionActivity )   :
+class QuesAdapter(val quesId:ArrayList<Int>, val items:List<QuestionItems>?, val activity: QuestionActivity)   :
     RecyclerView.Adapter<QuesAdapter.ViewHolder>() {
     class ViewHolder(view: View): RecyclerView.ViewHolder(view){
         val question=view.question
