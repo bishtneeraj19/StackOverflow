@@ -1,18 +1,37 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".QuestionActivity">
-
-    <TextView
-        android:layout_width="wrap_content"
+    tools:context=".activity.QuestionActivity">
+    <androidx.appcompat.widget.Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="?android:actionBarSize"
+        android:id="@+id/toolbar"
+        android:visibility="gone"
+        android:background="@color/colorPrimary"
+        app:layout_scrollFlags="scroll|exitUntilCollapsed"
+        />
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/animationView"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:layout_centerVertical="true"
+        android:layout_centerInParent="true"
+        android:foregroundGravity="center"
+        app:lottie_rawRes="@raw/animation"
+        android:visibility="visible"
+        app:lottie_autoPlay="true"
+        app:lottie_loop="true"/>
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_below="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:background="@drawable/bg"
+        android:visibility="gone"
+        android:layout_height="match_parent"
+        android:id="@+id/Listques"/>
+
+</RelativeLayout>

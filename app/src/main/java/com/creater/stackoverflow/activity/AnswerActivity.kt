@@ -1,7 +1,8 @@
-package com.creater.stackoverflow
+package com.creater.stackoverflow.activity
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import com.creater.stackoverflow.R
 
 class AnswerActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
